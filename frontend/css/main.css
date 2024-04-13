@@ -11902,7 +11902,7 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   background-color: #cce8cc;
-  background-image: url("../static/futa-jakub-borek.png");
+  background-image: url("../static/bg-bun.png");
 }
 body .navbar {
   background: rgba(226, 182, 207, 0.8);
@@ -11949,6 +11949,9 @@ body .navbar .nav-link::before {
 body .navbar .nav-link:hover::before {
   transform: scaleX(1);
 }
+body section, body footer {
+  scroll-margin-top: 4.75rem;
+}
 body section:nth-child(even) > .container {
   background-color: #e365c1;
 }
@@ -11958,7 +11961,6 @@ body section:nth-child(odd) > .container {
 body section > .container {
   color: #f6efee;
   box-shadow: 0 30px 20px 15px #e2b6cf;
-  scroll-margin-top: 4.75rem;
 }
 body section > .container > .row > div {
   padding: 3rem 2rem;
@@ -11967,6 +11969,12 @@ body section .row .img-cute-border {
   border: 10px solid #f6efee;
   border-radius: 1rem;
   border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+}
+body footer {
+  background: rgba(226, 182, 207, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /*# sourceMappingURL=main.css.map */
