@@ -9,6 +9,7 @@ $c-lg: #E3E3E3;
 $c-mg1: #A2A2A2;
 $c-mg2: #808080;
 $c-dg: #5E5E5E;
+$c-dg2: #3A3A3A;
 
 @function hexToRGB($hex){
   @return red($hex), green($hex), blue($hex);
@@ -22,6 +23,9 @@ $c-dg: #5E5E5E;
 h1, h2, h3, h4, h5, h6{
   font-family: "Poppins", sans-serif;
   margin-bottom: 2rem;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 1rem;
+  }
 }
 h1{
   font-size: 3rem;
@@ -59,6 +63,10 @@ h6{
 }
 .button-green-reverse{
   @include button-green($p-purple-3, $p-green);
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 body{
@@ -138,10 +146,13 @@ body{
     }
     & > .container {
       color: $p-white;
-      box-shadow: 0 30px 20px 15px $p-purple-1; //ew 3 wartość na 30
+      box-shadow: 0 30px 20px 15px $p-purple-1;
     }
     .container{
       padding: 3rem 2rem;
+      @media screen and (max-width: 576px){
+        padding: 1.5rem 0.75rem;
+      }
     }
     .row{
       .img-cute-border{
@@ -161,6 +172,67 @@ body{
         font-size: 1.25rem;
         &:not(:last-of-type){
           padding-bottom: 0.5rem;
+        }
+      }
+    }
+    form{
+      max-width: 30rem;
+      background-color: $p-green;
+      border-radius: 1.5rem;
+      font-size: 1.25rem;
+      padding: 2rem 3rem;
+      color: $c-dg2;
+      box-shadow: 10px 10px 15px 10px $c-dg;
+      @media screen and (max-width: 576px){
+        font-size: 1rem;
+        padding: 2rem 2rem;
+      }
+      @media screen and (max-width: 500px){
+        box-shadow: 0 10px 30px 10px $c-dg;
+      }
+      .input-wrapper{
+        display: flex;
+        flex-flow: column;
+        justify-content: left;
+        textarea{
+          height: 5rem;
+        }
+        input[type="text"], textarea{
+          min-width: 22.5rem;
+          border-radius: 0.5rem;
+          border: 0 solid;
+          padding: 0.25rem 0.5rem;
+          @media screen and (max-width: 576px){
+            min-width: unset;
+            width: 100%;
+          }
+        }
+        input[type="checkbox"]{
+          width: 1.5rem;
+          height: 1.5rem;
+          display: grid;
+          place-content: center;
+          appearance: none;
+          background-color: #fff;
+          margin: 0;
+          border: 2px solid $p-purple-2;
+          &::before{
+            content: "";
+            width: 0.75rem;
+            height: 0.75rem;
+            transform: scale(0);
+            transition: 0.15s transform ease-in-out;
+            box-shadow: inset 1.25rem 1.25rem $p-purple-2;
+          }
+          &:checked::before{
+            transform: scale(1);
+          }
+        }
+        input[type="submit"]{
+          color: $white;
+          border-radius: 0.5rem;
+          border: 0;
+          padding: 0.25rem 1rem;
         }
       }
     }

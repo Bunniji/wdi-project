@@ -11850,6 +11850,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 576px) {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-bottom: 1rem;
+  }
+}
 
 h1, .h1 {
   font-size: 3rem;
@@ -11897,6 +11902,10 @@ h6, .h6 {
   background-color: #aadeaa;
   box-shadow: 0 0 15px 6px #f6efee;
   transition: all 0.3s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 body {
@@ -11978,6 +11987,11 @@ body section > .container {
 body section .container {
   padding: 3rem 2rem;
 }
+@media screen and (max-width: 576px) {
+  body section .container {
+    padding: 1.5rem 0.75rem;
+  }
+}
 body section .row .img-cute-border {
   border: 10px solid #f6efee;
   border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
@@ -11994,6 +12008,73 @@ body section .bun-list li {
 }
 body section .bun-list li:not(:last-of-type) {
   padding-bottom: 0.5rem;
+}
+body section form {
+  max-width: 30rem;
+  background-color: #cce8cc;
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  padding: 2rem 3rem;
+  color: #3A3A3A;
+  box-shadow: 10px 10px 15px 10px #5E5E5E;
+}
+@media screen and (max-width: 576px) {
+  body section form {
+    font-size: 1rem;
+    padding: 2rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  body section form {
+    box-shadow: 0 10px 30px 10px #5E5E5E;
+  }
+}
+body section form .input-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+}
+body section form .input-wrapper textarea {
+  height: 5rem;
+}
+body section form .input-wrapper input[type=text], body section form .input-wrapper textarea {
+  min-width: 22.5rem;
+  border-radius: 0.5rem;
+  border: 0 solid;
+  padding: 0.25rem 0.5rem;
+}
+@media screen and (max-width: 576px) {
+  body section form .input-wrapper input[type=text], body section form .input-wrapper textarea {
+    min-width: unset;
+    width: 100%;
+  }
+}
+body section form .input-wrapper input[type=checkbox] {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-content: center;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  border: 2px solid #e396df;
+}
+body section form .input-wrapper input[type=checkbox]::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: scale(0);
+  transition: 0.15s transform ease-in-out;
+  box-shadow: inset 1.25rem 1.25rem #e396df;
+}
+body section form .input-wrapper input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+body section form .input-wrapper input[type=submit] {
+  color: #fff;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 0.25rem 1rem;
 }
 body footer {
   background: rgba(226, 182, 207, 0.8);
