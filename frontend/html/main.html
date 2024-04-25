@@ -11,10 +11,13 @@
         <div class="container">
             <a href="#" class="navbar-brand">
                 <span class="navbar-brand-text">BunSite</span>
-                <img src="../static/logobun.png" alt="logo" width="50" height="50">
+                <img src="../static/logo-bun.png" alt="logo" width="50" height="50">
             </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBarToggle" aria-controls="navbarBarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarBarToggle">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav w-100 justify-content-around mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="#differences">Różnice</a>
                     </li>
@@ -38,13 +41,10 @@
                     </li>
                 </ul>
             </div>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBarToggle" aria-controls="navbarBarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
     </nav>
 
-    <section id="differences">
+    <section id="differences" class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -52,15 +52,15 @@
                     <h2 class="text-center">Różnica pomiędzy zajączkiem a królikiem</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6">
+            <div class="row mb-5">
+                <div class="col-6 d-flex align-items-center justify-content-center">
                     <img src="https://rikoland.pl/data/include/img/news/1621343212.jpg" class="img-fluid img-cute-border" width="" height="">
                 </div>
                 <div class="col-6 d-flex align-items-center">
                     <article>
-                        <h3>Królik</h3>
+                        <h3 class="text-center">Królik</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi debitis dicta esse expedita, explicabo laudantium minus officia perspiciatis placeat soluta suscipit vitae voluptatem.
+                            Króliki nie są zwierzętami rodzimymi na naszych terenach. Zostały sprowadzone do Europy przez Rzymian. Dzikie króliki są mniejsze od zajęcy, ich ciało jest okrągłe, a uszy bardziej mięsiste. Umaszczenie królików jest podobne do umaszczenia zajęcy przybierając barwę szarobrunatną. Ciąża u królików trwa średnio 42 dni, a samica rodzi od 3 do 8 młodych. Zwierzęta te są gniazdownikami, dlatego też młode rodzą się ślepe, głuche i bez owłosienia. Króliki są zwierzętami stadnymi, żyją w grupach, gdzie dobierają się w pary. Gniazda królików znajdują się pod ziemią, zwierzęta wykopują nory znajdujące się w okolicy drzew i krzewów. W przeciwieństwie do zajęcy preferują ukrycie się przed drapieżnikami niż ucieczkę.
                         </p>
                     </article>
                 </div>
@@ -68,13 +68,13 @@
             <div class="row">
                 <div class="col-6 d-flex align-items-center">
                     <article>
-                        <h3>Zając</h3>
+                        <h3 class="text-center">Zając</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur commodi debitis dicta esse expedita, explicabo laudantium minus officia perspiciatis placeat soluta suscipit vitae voluptatem.
+                            Zające są większe od królików (dziko żyjących), ich ciało jest smuklejsza, a uszy są dłuższe. Umaszczenie zajęcy jest szarobrunatne z białą okrywą na brzuchu. Ciąża u zajęcy trwa 30-31 dni, średnia ilość młodych w miocie sięga 5. Zające są zagniazdownikami, dlatego też młode rodzą się owłosione z otwartymi oczami. Młode pozostają w kotlinach (gniazdach) przez 4 tygodnie, a samica odwiedza młode raz w ciągu całego dnia, aby je nakarmić. Zwierzęta te łączą się w pary jedynie podczas godów, poza tym okresem są samotnikami. Gniazda zajęcy znajdują się na otwartych terenach w niewielkich zagłębieniach. Zwierzęta zaniepokojone tupią skokami w ziemię i są doskonałymi biegaczami, które uciekają przed drapieżnikami.
                         </p>
                     </article>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-flex align-items-center justify-content-center">
                     <img src="https://houseofpostcards.pl/userdata/public/gfx/55740/Zajac.jpg" class="img-fluid img-cute-border" width="" height="">
                 </div>
 
@@ -91,7 +91,36 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    //karuzela z boopstrapa
+                        <div id="bunnyCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#bunnyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#bunnyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#bunnyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#bunnyCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../static/carouselBun1.png" class="d-block mx-auto img-fluid" alt="" width="500" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../static/carouselBun2.png" class="d-block mx-auto img-fluid" alt="" width="500" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../static/carouselBun3.png" class="d-block mx-auto img-fluid" alt="" width="500" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../static/carouselBun4.png" class="d-block mx-auto img-fluid" alt="" width="500" height="500">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#bunnyCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#bunnyCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                 </div>
             </div>
         </div>
@@ -99,13 +128,36 @@
 
     <section id="diet">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Sekcja o diecie</h2>
+            <div class="row mb-4">
+                <div class="col-12 pb-0">
+                    <h2 class="text-center">Dieta</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
+            <div class="row justify-content-center mb-5">
+                <div class="col-6 d-flex flex-column">
+                    <h3 class="text-center">Siano</h3>
+                    <p class="mb-0">Siano jest podstawą króliczej diety (cała dieta powinna składać się z niego w 80%), królik powinien mieć do niego nieograniczony dostęp. Jest źródłem niezbędnego włókna i witamin. Dzięki niemu królik ściera zęby, a jego układ pokarmowy pracuje prawidłowo. Pamiętaj, że zęby królicze rosną przez całe życie — jeśli nie zapewnisz mu możliwości ścierania ich na sianie, zęby mogą przerosnąć, sprawiając Twojemu króliczkowi ogromny ból.</p>
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <img src="https://www.sklep.kamienieogrodowe.com/images/ZDJCIAMARTAWORKI25KG/siano/siadno-dla-krolika-sklep.jpg" class="img-fluid img-cute-border" alt="" width="272" height="240">
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-4 offset-1 d-flex justify-content-center align-items-center">
+                    <img src="https://cdn.shopify.com/s/files/1/0087/0295/1479/files/wild-rabbits-drinking-at-water-hole-bettmann_480x480.jpg?v=1694748428" alt="" class="img-fluid img-cute-border" width="480" height="480">
+                </div>
+                <div class="col-6 d-flex flex-column">
+                    <h3 class="text-center">Woda</h3>
+                    <p class="mb-0">Tak, woda. Nie jest to oczywiste dla każdego. Nic nie zastąpi królikowi wody — musi mieć do niej nieograniczony dostęp. Warto również zwrócić uwagę na jej czystość. Wszelkie wody mineralne, mineralizowane czy gazowane, a nawet woda przegotowana są szkodliwe dla królika. Również filtry uzdatniające wodę sprawiają, że staje się ona uboga w jony, co również negatywnie wpływa na królika. Większość uszaków nie chce pić z poidła, dlatego też dużo więcej wody znika, gdy znajduje się ona w misce (nie jest to jednak zasada).</p>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-6 offset-1 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="text-center">Zioła, zielenina, gałązki</h3>
+                    <p class="mb-0">Zarówno świeże, jak i suszone są źródłem wielu składników odżywczych. Gałązki i korzonki, poza tym, że ścierają zęby, są także zdrowym smakołykiem. Dietę można uzupełnić warzywami czy granulatem, ale trzeba pamiętać, że są one raczej dodatkiem do króliczej diety.</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <img src="https://vivaziola.pl/wp-content/uploads/2020/10/AdobeStock_142291058-1-900x500.jpeg" class="img-fluid img-cute-border" alt="" width="900" height="500">
                 </div>
             </div>
         </div>
@@ -118,8 +170,22 @@
                     <h2>Jak trudne są zajęczaki?</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <p>
+                        Króliki to idealne zwierzęta na prezent? Wiele osób tak uważa, kierując się wyglądem tych małych ssaków. Puchate, skaczące kuleczki z długimi uszami są uwielbiane przez dzieci. Decydując się na ich zakup, trzeba jednak pamiętać, że króliki – jak wiele innych zwierząt domowych – mają specyficzne wymagania i wymagają sporo opieki.
+                    </p>
+                    <ul class="bun-list p-0 px-lg-5">
+                        <li>Muszą mieć odpowiednio dużą klatkę, w której nie będzie im ciasno.</li>
+                        <li>Z klatki trzeba je codziennie, na kilka godzin, wypuszczać na odpowiednio zabezpieczony teren, by mogły się wyszaleć. </li>
+                        <li>Muszą mieć stały dostęp do wody, siana, ziół, które trzeba codziennie uzupełniać.</li>
+                        <li>Trzeba zadbać, by czuły się bezpieczne. A idealnie byłoby, gdyby miały również królicze towarzystwo.</li>
+                        <li>No i – niestety – zazwyczaj nie lubią być podnoszone, brane na ręce i przytulane.</li>
+                        <li>Sytuacja, gdy nie może dotknąć ziemi czterema kończynami, jest dla tego zwierzęcia stresująca.</li>
+                    </ul>
+                    <p>
+                        Uwaga! Króliki uwielbiają towarzystwo. Jeśli będą żyć w pojedynkę, nie będą się czuły szczęśliwe. Zwierzęta żyjące w parach ogrzewają się nawzajem w zimie, a także oczyszczają sobie trudno dostępne okolice – np. wokół oczu. Można łączyć ze sobą sterylizowaną parę o dowolnej płci. Nie jest jednak dobrym pomysłem łączenie królika ze świnką morską. Te zwierzęta często się nie dogadują, mają różne diety. Zdarza się też, że królik może zastraszyć świnkę.
+                    </p>
                 </div>
             </div>
         </div>
@@ -129,11 +195,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>Przykłady odwagi .>video<.</h2>
+                    <h2>Przykład odwagi</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex">
+                    <iframe width="560" height="315" class="mw-100 mx-auto" src="https://www.youtube.com/embed/8MHUlVIJy94?si=Sq8ESVqQO_N8Duh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>
@@ -143,11 +210,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>magiczny formularz</h2>
+                    <h2>Formularz kontaktowy</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-5 d-flex flex-column justify-content-center align-items-center">
+                    <img src="../static/form-bun.png" class="img-fluid" alt="" width="566" height="588">
+                </div>
+                <div class="col-7">
+                    <form action="imagine-having-backend" class="d-flex flex-column">
+                        <div>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <input type="text">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -165,32 +243,36 @@
             <div class="row mt-4">
                 <div class="col-12 text-center">
                     &copy;
-                    <span id="footer-text">
-                        2024
-                    </span>
+                    <span id="footer-text"></span>
                     Kamil Nikolak
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="modal modal-lg fade" id="materialSources" tabindex="-1" aria-labelledby="materialSources" aria-hidden="true">
+    <div class="modal fade" id="materialSources" tabindex="-1" aria-labelledby="materialSources" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="modal-title" id="materialSourcesLabel">Źródła wszystkich zewnętrznych zawartości</span>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
                 </div>
-                <div class="modal-body small">
+                <div class="modal-body small d-flex justify-content-center align-items-center flex-column">
                     <a href="https://coolors.co/palette/cce8cc-f6efee-e2b6cf-e396df-e365c1" target="_blank">Paleta</a>
                     <a href="https://nohat.cc/f/we-heart-it-drawing-hand-painted-rabbit-transparent-background-png-clipart/comhiclipartilykh-201910101547.html
 " target="_blank">Źródło 1</a>
-                    <a href="https://i.pinimg.com/474x/73/c2/10/73c2101f867a58fc230ac9cafad7a746.jpg" target="_blank">Źródło 1</a>
+                    <a href="https://i.pinimg.com/474x/73/c2/10/73c2101f867a58fc230ac9cafad7a746.jpg" target="_blank">Źródło 2</a>
 
-                    <a href="" target="_blank">Źródło 1</a>
-                    <a href="" target="_blank">Źródło 1</a>
-                    <a href="" target="_blank">Źródło 1</a>
-                    <a href="" target="_blank">Źródło 1</a>
+                    <a href="https://www.cenyrolnicze.pl/wiadomosci/rynki-rolne/pozostale-zwierzeta-hodowlane/13684-krolik-i-zajac-to-nie-to-samo" target="_blank">Źródło 3</a>
+                    <a href="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fhes-super-cute-v0-lzabfgbjqhwc1.png%3Fwidth%3D1835%26format%3Dpng%26auto%3Dwebp%26s%3D13979e5d6c2ee0503841fd6c0a5b71ec59d71d8f" target="_blank">Źródło 4</a>
+                    <a href="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwhen-dr-pepper-was-just-a-baby-v0-d7itnhqlo5vc1.jpg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D6b6518f1d9f5f17c98ccc1d021388d2706b561eb" target="_blank">Źródło 5</a>
+                    <a href="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwhen-scout-was-tiny-enough-to-fit-through-the-bars-v0-uby0jk9kb2vc1.jpeg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D41a24de7bd14c87bf49151d7fd981a1bceb54464" target="_blank">Źródło 6</a>
+                    <a href="https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fgezibavxyt5b1.jpg%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D5238fc75757b18c1d3f44056c5d6cae5e80b3734" target="_blank">Źródło 7</a>
+                    <a href="https://www.pngegg.com/pl/png-tywgw/download" target="_blank">Źródło 8</a>
+                    <a href="https://kroliki.net/pl/porady/zywienie-krolika/" target="_blank">Źródło 9</a>
+                    <a href="https://www.flaticon.com/free-icon/rabbit_7441511" target="_blank">Źródło 10</a>
+                    <a href="https://www.zooplus.pl/magazyn/male-zwierzeta/gatunki-malych-zwierzat/czym-rozni-sie-zajac-od-krolika" target="_blank">Źródło 11</a>
+                    <a href="https://www.hiclipart.com/free-transparent-background-png-clipart-ilykh/download?utm_medium=social&utm_source=nohat&utm_campaign=free_resource" target="_blank">Źródło 12</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
@@ -199,8 +281,8 @@
         </div>
     </div>
 
-
-
+    <!--scripts-->
+    <script src="../js/script.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

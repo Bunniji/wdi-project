@@ -11848,30 +11848,31 @@ textarea.form-control-lg {
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Poppins", sans-serif;
+  margin-bottom: 2rem;
 }
 
 h1, .h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
-}
-
-h3, .h3 {
-  font-size: 2.25rem;
-}
-
-h4, .h4 {
   font-size: 2rem;
 }
 
-h5, .h5 {
+h3, .h3 {
   font-size: 1.75rem;
 }
 
-h6, .h6 {
+h4, .h4 {
   font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1.1rem;
 }
 
 .button-green {
@@ -11903,6 +11904,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #cce8cc;
   background-image: url("../static/bg-bun.png");
+  background-position-x: center;
 }
 body .navbar {
   background: rgba(226, 182, 207, 0.8);
@@ -11930,11 +11932,19 @@ body .navbar .navbar-brand .navbar-brand-text::before {
 body .navbar .navbar-brand:hover .navbar-brand-text::before {
   transform: scaleX(1);
 }
-body .navbar .nav-link {
+body .navbar .nav-item {
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  body .navbar .nav-item {
+    margin: 0.5rem 0;
+  }
+}
+body .navbar .nav-item .nav-link {
   position: relative;
   line-height: 1;
 }
-body .navbar .nav-link::before {
+body .navbar .nav-item .nav-link::before {
   content: "";
   position: absolute;
   display: block;
@@ -11946,7 +11956,7 @@ body .navbar .nav-link::before {
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
-body .navbar .nav-link:hover::before {
+body .navbar .nav-item .nav-link:hover::before {
   transform: scaleX(1);
 }
 body section, body footer {
@@ -11958,17 +11968,32 @@ body section:nth-child(even) > .container {
 body section:nth-child(odd) > .container {
   background-color: #e396df;
 }
+body section:first-of-type > .container {
+  box-shadow: 0 10px 20px 15px #e2b6cf;
+}
 body section > .container {
   color: #f6efee;
   box-shadow: 0 30px 20px 15px #e2b6cf;
 }
-body section > .container > .row > div {
+body section .container {
   padding: 3rem 2rem;
 }
 body section .row .img-cute-border {
   border: 10px solid #f6efee;
-  border-radius: 1rem;
   border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+}
+body section #bunnyCarousel .carousel-control-next-icon, body section #bunnyCarousel .carousel-control-prev-icon {
+  height: 4rem;
+  width: 4rem;
+}
+body section .bun-list {
+  list-style: georgian inside url("../static/bun-list.png");
+}
+body section .bun-list li {
+  font-size: 1.25rem;
+}
+body section .bun-list li:not(:last-of-type) {
+  padding-bottom: 0.5rem;
 }
 body footer {
   background: rgba(226, 182, 207, 0.8);

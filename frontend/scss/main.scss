@@ -21,24 +21,25 @@ $c-dg: #5E5E5E;
 
 h1, h2, h3, h4, h5, h6{
   font-family: "Poppins", sans-serif;
+  margin-bottom: 2rem;
 }
 h1{
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 h2{
-  font-size: 2.5rem;
-}
-h3{
-  font-size: 2.25rem;
-}
-h4{
   font-size: 2rem;
 }
-h5{
+h3{
   font-size: 1.75rem;
 }
-h6{
+h4{
   font-size: 1.5rem;
+}
+h5{
+  font-size: 1.25rem;
+}
+h6{
+  font-size: 1.1rem;
 }
 
 @mixin button-green($btn-color1, $btn-color2){
@@ -65,6 +66,7 @@ body{
   font-family: "Roboto", sans-serif;
   background-color: $p-green;
   background-image: url("../static/bg-bun.png");
+  background-position-x: center;
 
   .navbar{
     background: rgba($p-purple-1, 0.8);
@@ -95,23 +97,29 @@ body{
         }
       }
     }
-    .nav-link{
-      position: relative;
-      line-height: 1;
-      &::before{
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 3px;
-        bottom: 0;
-        left: 0;
-        background-color: $p-purple-3;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
+    .nav-item{
+      text-align: center;
+      @media screen and (max-width: 992px){
+        margin: 0.5rem 0;
       }
-      &:hover::before{
-        transform: scaleX(1);
+      .nav-link{
+        position: relative;
+        line-height: 1;
+        &::before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: $p-purple-3;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        &:hover::before{
+          transform: scaleX(1);
+        }
       }
     }
   }
@@ -125,18 +133,35 @@ body{
     &:nth-child(odd) > .container {
       background-color: $p-purple-2;
     }
+    &:first-of-type > .container {
+      box-shadow: 0 10px 20px 15px $p-purple-1;
+    }
     & > .container {
       color: $p-white;
       box-shadow: 0 30px 20px 15px $p-purple-1; //ew 3 wartość na 30
-      & > .row > div {
-        padding: 3rem 2rem;
-      }
+    }
+    .container{
+      padding: 3rem 2rem;
     }
     .row{
       .img-cute-border{
         border: 10px solid $p-white;
-        border-radius: 1rem;
         border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+      }
+    }
+    #bunnyCarousel{
+      .carousel-control-next-icon, .carousel-control-prev-icon{
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+    .bun-list{
+      list-style: georgian inside url("../static/bun-list.png");
+      li{
+        font-size: 1.25rem;
+        &:not(:last-of-type){
+          padding-bottom: 0.5rem;
+        }
       }
     }
   }
