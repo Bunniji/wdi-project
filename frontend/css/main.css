@@ -12035,16 +12035,17 @@ body section form .input-wrapper {
   justify-content: left;
 }
 body section form .input-wrapper textarea {
+  min-height: 4rem;
   height: 5rem;
 }
-body section form .input-wrapper input[type=text], body section form .input-wrapper textarea {
+body section form .input-wrapper input:not([type=checkbox], [type=submit]), body section form .input-wrapper textarea {
   min-width: 22.5rem;
   border-radius: 0.5rem;
   border: 0 solid;
   padding: 0.25rem 0.5rem;
 }
 @media screen and (max-width: 576px) {
-  body section form .input-wrapper input[type=text], body section form .input-wrapper textarea {
+  body section form .input-wrapper input:not([type=checkbox], [type=submit]), body section form .input-wrapper textarea {
     min-width: unset;
     width: 100%;
   }
@@ -12070,8 +12071,8 @@ body section form .input-wrapper input[type=checkbox]::before {
 body section form .input-wrapper input[type=checkbox]:checked::before {
   transform: scale(1);
 }
-body section form .input-wrapper input[type=submit] {
-  color: #fff;
+body section form .input-wrapper input[type=submit], body section form .input-wrapper button {
+  color: #fff !important;
   border-radius: 0.5rem;
   border: 0;
   padding: 0.25rem 1rem;
